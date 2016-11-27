@@ -48,13 +48,13 @@ public class MainActivity extends AppCompatActivity {
         handler1 = new Handler();
         handler =new Handler();
         fond= (ImageView) findViewById(R.id.imageView2);
-        fond.setY(-50);
+        fond.setY(0xffffffce);
         cloud= (ImageView) findViewById(R.id.imageView8);
         textScore= (TextView) findViewById(R.id.textView);
         textScore.setText(String.valueOf(score));
-        cloud.setY(-320);
+        cloud.setY(0xfffffec0);
         cloud.setX(0);
-        GameOverImage.setY(-4000);
+        GameOverImage.setY(0xfffff060);
         initCylindre();
 
         // textScore.setText(sqlDatabaseManager.getScore());
@@ -160,7 +160,7 @@ public class MainActivity extends AppCompatActivity {
 
             GameOver=false;
             startGame=false;
-            GameOverImage.setY(-4000);
+            GameOverImage.setY(0xfffff060);
             imagebird.setImageResource(R.drawable.bird);
             imagebird.setY(1000);
             imagecylindre.setX(2000);
@@ -516,7 +516,7 @@ public class MainActivity extends AppCompatActivity {
 
                     handler.postDelayed(this,10);}
                 else{
-                    GameOverImage.setY(1000);
+                    GameOverImage.setY(-1000);
                   //  int x= (int)Integer.valueOf(sqlDatabaseManager.getScore());
                   //  if(x<score){
                    //     sqlDatabaseManager.updateScore(score);
